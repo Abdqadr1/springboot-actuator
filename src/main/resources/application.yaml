@@ -1,0 +1,20 @@
+info:
+  app:
+    version: 1.1
+    name: Testing spring boot actuator
+    description: First app to test the spring boot actuator
+#to expose other endpoints
+management:
+  #if this property is not enabled. all custom info declared up will not be shown
+  info:
+    env:
+      enabled: true
+  endpoint:
+    health:
+      # to show more details in the health endpoint
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        #you can include or exclude the endpoints that will need or everything("*")
+        include: "*"
