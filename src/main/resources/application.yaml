@@ -2,7 +2,7 @@ info:
   app:
     version: 1.1
     name: Testing spring boot actuator
-    description: First app to test the spring boot actuator
+    description: Spring boot actuator
 #to expose other endpoints
 management:
   #if this property is not enabled. all custom info declared up will not be shown
@@ -15,6 +15,8 @@ management:
       show-details: always
   endpoints:
     web:
+      # use this property to change the base url for the actuator
+      # base-path: /custom-url #localhost:8080/custom-url
       exposure:
-        #you can include or exclude the endpoints that will need or everything("*")
-        include: "*"
+        #you can include or exclude the endpoints as you want.
+        include: "*" #the wildcard * means all
